@@ -5,56 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Currency converter">
   <meta name="author" content="Kevin Spinks">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Currency Converter</title>
 </head>
 <body>
-  <div class="container">
-    <form action="">
+    <section class="container">
+      <form>
+        <div>
+          <label for="currencyAmount">Currency amount</label>
+          <input type="number" id="currencyAmount" name="currencyAmount" min="1" required>
+        </div>
+        <div class="selection">
+          <div>
+            <label for="fromCurrency">From: </label>
+            <select id="fromCurrency" name="fromCurrency" required>
+              <option value="">--Select Currency--</option>
+              <option value="usd">US Dollar (USD)</option>
+              <option value="eur">Euro (EUR)</option>
+              <option value="jpy">Japanese Yen (JPY)</option>
+              <option value="gbp">Pound Sterling (GBP)</option>
+              <option value="aud">Australian Dollar (AUD)</option>
+              <option value="cad">Canadian Dollar(CAD)</option>
+              <option value="chf">Swiss Franc (CHF)</option>
+              <option value="cnh">Chinese Renminbi (CNH)</option>
+              <option value="hkd">Hong Kong Dollar (HKD)</option>
+              <option value="nzd">New Zealand Dollar (NZD)</option>
+            </select>
+          </div>
+          <div>
+            <label for="toCurrency">To: </label>
+            <select id="toCurrency" name="toCurrency" required>
+              <option value="">--Select Currency--</option>
+              <option value="usd">US Dollar (USD)</option>
+              <option value="eur">Euro (EUR)</option>
+              <option value="jpy">Japanese Yen (JPY)</option>
+              <option value="gbp">Pound Sterling (GBP)</option>
+              <option value="aud">Australian Dollar (AUD)</option>
+              <option value="cad">Canadian Dollar(CAD)</option>
+              <option value="chf">Swiss Franc (CHF)</option>
+              <option value="cnh">Chinese Renminbi (CNH)</option>
+              <option value="hkd">Hong Kong Dollar (HKD)</option>
+              <option value="nzd">New Zealand Dollar (NZD)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <span id="convertBtn" class="convertBtn">Convert</span>
+        </div>
+      </form>
       <div>
-        <label for="currencyAmount">Currency amount</label>
-        <input type="number" id="currencyAmount" name="currencyAmount" min="1" required>
+        <span id="output" class="output"></span>
       </div>
-      <div>
-        <label for="fromCurrency">From: </label>
-        <select id="fromCurrency" name="fromCurrency" required>
-          <option value="">--Select Currency--</option>
-          <option value="usd">US Dollar (USD)</option>
-          <option value="eur">Euro (EUR)</option>
-          <option value="jpy">Japanese Yen (JPY)</option>
-          <option value="gbp">Pound Sterling (GBP)</option>
-          <option value="aud">Australian Dollar (AUD)</option>
-          <option value="cad">Canadian Dollar(CAD)</option>
-          <option value="chf">Swiss Franc (CHF)</option>
-          <option value="cnh">Chinese Renminbi (CNH)</option>
-          <option value="hkd">Hong Kong Dollar (HKD)</option>
-          <option value="nzd">New Zealand Dollar (NZD)</option>
-        </select>
-      </div>
-      <div>
-        <label for="toCurrency">To: </label>
-        <select id="toCurrency" name="toCurrency" required>
-          <option value="">--Select Currency--</option>
-          <option value="usd">US Dollar (USD)</option>
-          <option value="eur">Euro (EUR)</option>
-          <option value="jpy">Japanese Yen (JPY)</option>
-          <option value="gbp">Pound Sterling (GBP)</option>
-          <option value="aud">Australian Dollar (AUD)</option>
-          <option value="cad">Canadian Dollar(CAD)</option>
-          <option value="chf">Swiss Franc (CHF)</option>
-          <option value="cnh">Chinese Renminbi (CNH)</option>
-          <option value="hkd">Hong Kong Dollar (HKD)</option>
-          <option value="nzd">New Zealand Dollar (NZD)</option>
-        </select>
-      </div>
-      <div>
-        <span id="convertBtn" class="convertBtn">Convert</span>
-      </div>
-    </form>
-  </div>
-  <div>
-    <span id="output">0</span>
-  </div>
+    </section>
 
 </body>
 <script src="scripts.js"></script>

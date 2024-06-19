@@ -2,31 +2,60 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 div {
-  width: 50%;
-  margin: 0 auto;
+  display: inline;
   text-align: center;
 }
 
 form {
+  height: 150px;
   display: flex;
-  height: 200px;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
 }
 
-select,
-section:focus,
-section:checked,
-option:focus {
-  padding: 1.5rem 1.15rem;
-  border: 2px solid rgb(88, 249, 249);
+select {
+  padding: 1rem 1rem;
+  border: 2px solid rgb(34, 255, 0);
+  border-radius: 20px;
 }
 
 input[type^="number"]{
-  flex: 1;
+  padding: .5rem;
+  flex:1;
+}
+
+input[type^="number"],
+.output{
+  font-size:1.5rem;
+  font-weight: 800;
+}
+
+.convertBtn {
+  font-size: 1.15rem;
+  margin: 3rem;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: .5rem 1rem;
+  background-color: rgb(36, 138, 36);
+  color: white;
+}
+
+.convertBtn:hover {
+  cursor: pointer;
+  background: rgba(36, 138, 36, .7)
 }
 
 .selling {
@@ -37,15 +66,6 @@ input[type^="number"]{
   color: green;
 }
 
-.convertBtn {
-  border: 1px solid black;
-  border-radius: 30px;
-  padding: .5rem 1.5rem;
-  background-color: rgb(36, 138, 36);
-  color: white;
-}
-
-.convertBtn:hover {
-  cursor: pointer;
-  background: rgba(36, 138, 36, .7)
+.error {
+  color: red;
 }

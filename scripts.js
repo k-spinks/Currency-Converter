@@ -120,21 +120,25 @@ function convert () {
   const toCurrency = document.querySelector('#toCurrency').value
   let amount = Number(document.querySelector('#currencyAmount').value)
 
-  if(fromCurrency === "" || toCurrency === "" || amount === 0) {
-    //TODO: Add better user validation
-    alert('Select a valid inputs')
+  if(document.querySelector('#currencyAmount').validity.rangeUnderflow || amount === 0) {
+    output.textContent = 'Value must be more than 0'
+    output.classList.add('error')
     return
   }
-  if(fromCurrency === toCurrency) {
-    //TODO: Add better user validation
-    alert('Please select 2 different currencies')
-    return
-  }
+  output.textContent = ''
 
-  let conversionRates = conversionRatesTable[fromCurrency][toCurrency]
-  format(amount, toCurrency, conversionRates)
+  if(fromCurrency === "" || toCurrency === "" || fromCurrency === toCurrency) {
+    //TODO: Add better user validation
+    output.textContent = 'Select two different currencies'
+    return
+  }
+  output.textContent = ''
+  output.classList.remove('error')
+  
+  let conversionRate = conversionRatesTable[fromCurrency][toCurrency]
+  let convertedAmount = amount * conversionRate
+  format(convertedAmount, toCurrency, conversionRate)
 }
-
 
 function format(convertedAmount, toCurrency, conversionRates) {
   output.classList.remove('selling', 'buying')
