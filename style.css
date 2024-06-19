@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  height: 200px;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+select,
+section:focus,
+section:checked,
+option:focus {
+  padding: 1.5rem 1.15rem;
+  border: 2px solid rgb(88, 249, 249);
+}
+
+input[type^="number"]{
+  flex: 1;
+}
+
+.selling {
+  color: red;
+}
+
+.buying {
+  color: green;
+}
+
+.convertBtn {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: .5rem 1.5rem;
+  background-color: rgb(36, 138, 36);
+  color: white;
+}
+
+.convertBtn:hover {
+  cursor: pointer;
+  background: rgba(36, 138, 36, .7)
+}
