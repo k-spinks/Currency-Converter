@@ -130,6 +130,7 @@ function convert () {
   if(fromCurrency === "" || toCurrency === "" || fromCurrency === toCurrency) {
     //TODO: Add better user validation
     output.textContent = 'Select two different currencies'
+    output.classList.add('error')
     return
   }
   output.textContent = ''

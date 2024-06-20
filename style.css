@@ -19,7 +19,7 @@ div {
 }
 
 form {
-  height: 150px;
+  height: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,8 +44,9 @@ input[type^="number"],
 }
 
 .convertBtn {
+  display: block;
   font-size: 1.15rem;
-  margin: 3rem;
+  margin-top: 1rem;
   border: 1px solid black;
   border-radius: 30px;
   padding: .5rem 1rem;
